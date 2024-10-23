@@ -24,7 +24,7 @@ const EvaluateRule = () => {
         console.log("Payload being sent:", payload);
 
         try {
-            const response = await axios.post('http://localhost:5001/api/rules/evaluate', payload);
+            const response = await axios.post('https://rule-engine-backend-1.onrender.com/api/rules/evaluate', payload);
             console.log('Evaluation Result:', response.data);
             setEvaluationResult(response.data); // Set the evaluation result
             setErrorMessage(null); // Clear any previous error messages
